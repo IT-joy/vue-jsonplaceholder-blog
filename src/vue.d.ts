@@ -1,5 +1,9 @@
-declare module '*.vue' {
+declare module '@/components/MyComponent.vue' {
   import { DefineComponent } from 'vue'
-  const component: DefineComponent<{}, {}, any>
+  interface MyComponentProps {
+    items: string[]
+    selected: number
+  }
+  const component: DefineComponent<MyComponentProps>
   export default component
 }
